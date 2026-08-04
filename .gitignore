@@ -1,0 +1,25 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+google-service-account.json
+*-service-account.json
+credentials.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Dependencies / build output
+node_modules/
+dist/
+build/
+
+# Claude Code local state
+.claude/settings.local.json

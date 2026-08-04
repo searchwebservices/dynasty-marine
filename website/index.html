@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynasty Marine Customs — Marine Maintenance &amp; Engine Repower | Sarasota, FL</title>
+<meta name="description" content="Florida's top marine maintenance and repower service provider. ABYC &amp; NMEA certified. Serving Sarasota, Bradenton, Venice, and Nokomis. Free estimates within 48 hours.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/dynasty.css">
+<style>
+  .hero{background-image:url('assets/boat-dock.jpg')}
+  .svc-photo{width:100%; height:clamp(240px,34vw,420px); object-fit:cover;
+    border-radius:var(--radius-md); margin:var(--space-6) 0}
+  .reasons{list-style:none; counter-reset:r; display:grid;
+    grid-template-columns:1fr 1fr; gap:12px 40px; max-width:900px; margin:0 auto; text-align:left}
+  @media(max-width:700px){.reasons{grid-template-columns:1fr}}
+  .reasons li{counter-increment:r; display:flex; gap:12px; align-items:baseline;
+    font-family:var(--font-body); font-size:var(--fs-body-md); color:var(--text-primary)}
+  .reasons li::before{content:counter(r,decimal-leading-zero);
+    font-family:var(--font-display); font-weight:var(--fw-semibold); font-size:14px;
+    color:var(--brand-primary); letter-spacing:var(--ls-caps); flex-shrink:0}
+  .benefits-list{display:flex; flex-direction:column; gap:var(--space-4); max-width:900px; margin:0 auto}
+  .testi-row{display:flex; gap:var(--space-4); justify-content:center; flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap masthead">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Dynasty Marine Customs"></a>
+    <div class="addr">6770 15th St E, Unit 19 &middot; Sarasota, FL 34243</div>
+    <nav class="mnav">
+      <a class="lk" href="#services">Services</a>
+      <a class="lk" href="#benefits">Repower</a>
+      <a class="lk" href="#faq">FAQ</a>
+      <a class="btn btn-outline btn-sm" href="tel:+19412064375">(941) 206-4375</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================ Hero ============================ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker reveal">Need Marine Maintenance or Repower Service?</div>
+      <h1 class="h-xl reveal">Florida's Top Marine Maintenance &amp; Repower Service Provider</h1>
+      <p class="lede reveal">Get top-quality marine maintenance and repower service from Florida's top marine maintenance team. ABYC and NMEA certified, locally owned, straight with you on every estimate.</p>
+      <ul class="bullets reveal">
+        <li>Sturdy boats</li>
+        <li>Sleek yachts</li>
+        <li>Jet skis</li>
+        <li>And much more</li>
+      </ul>
+      <div class="ratings reveal">
+        <div class="rating"><span class="stars">★★★★★</span><span class="src">4.9 &middot; Google</span></div>
+        <div class="rating"><span class="stars">★★★★★</span><span class="src">5.0 &middot; Facebook</span></div>
+        <div class="rating"><span class="stars">★★★★★</span><span class="src">5.0 &middot; Yelp</span></div>
+      </div>
+      <div class="cta reveal">
+        <a class="btn btn-primary" href="quote.html">Build My Estimate</a>
+        <a class="btn btn-ghost" href="#services">See Services</a>
+      </div>
+    </div>
+
+    <div class="quote-panel quote-panel-light reveal">
+      <h3>Get a FREE Quote Today!</h3>
+      <p class="note">Please fill out the form for a free quote on your next marine maintenance and/or repower service.</p>
+      <form class="js-quote" novalidate>
+        <div class="field"><input class="f" type="text" name="first" placeholder="First name" required></div>
+        <div class="field"><input class="f" type="email" name="email" placeholder="Email" required></div>
+        <div class="field"><input class="f" type="tel" name="phone" placeholder="Phone number" required></div>
+        <div class="field">
+          <select class="f" name="service">
+            <option value="">Service Needed:</option>
+            <option>Marine maintenance</option>
+            <option>Marine repower</option>
+            <option>Installation</option>
+            <option>Sales</option>
+          </select>
+        </div>
+        <div class="field"><textarea class="f" name="message" placeholder="Tell us about your vessel"></textarea></div>
+        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+        <p class="fine">By clicking Submit, I consent to receive non-marketing text messages from Dynasty Marine Customs, LLC.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Trust bar ============================ -->
+<section class="sec sec-sunk" style="padding-top:var(--space-6);padding-bottom:var(--space-6)">
+  <div class="wrap certs reveal">
+    <div class="cert"><div class="ring">48</div><div class="lab">Free Estimates within 48 Hours</div></div>
+    <div class="cert"><div class="ring">ABYC</div><div class="lab">Certified</div></div>
+    <div class="cert"><div class="ring">NMEA</div><div class="lab">Certified</div></div>
+    <div class="cert"><div class="ring">★</div><div class="lab">Satisfaction Guaranteed</div></div>
+    <div class="cert"><div class="ring">FL</div><div class="lab">Locally Owned and Operated</div></div>
+  </div>
+</section>
+
+<!-- ============================ Services ============================ -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2 class="h-lg" style="margin-top:10px">Our Expert Marine Maintenance and Engine Repower Services</h2>
+      <p>We specialize in marine maintenance and repowers that'll have you back in action in no time. Serving Sarasota and Manatee counties, our dedicated team of marine mechanics provides a suite of nautical services to help your vessel wear and sail.</p>
+    </div>
+
+    <img class="svc-photo reveal" src="assets/hero-boat-sunset.jpg" alt="Boat docked at golden hour on Florida's Suncoast">
+
+    <div class="checklist reveal" style="margin-bottom:var(--space-7)">
+      <div class="chk"><span class="mk">✓</span>Annual service</div>
+      <div class="chk"><span class="mk">✓</span>Cooling system inspections</div>
+      <div class="chk"><span class="mk">✓</span>Outdrive and outboard service</div>
+      <div class="chk"><span class="mk">✓</span>Propeller and lower unit maintenance</div>
+      <div class="chk"><span class="mk">✓</span>Engine detailing</div>
+      <div class="chk"><span class="mk">✓</span>Steering systems</div>
+      <div class="chk"><span class="mk">✓</span>Bilge cleaning</div>
+      <div class="chk"><span class="mk">✓</span>Battery and electrical system checks</div>
+      <div class="chk"><span class="mk">✓</span>Regular oil and filter changes</div>
+      <div class="chk"><span class="mk">✓</span>Fuel system care</div>
+    </div>
+
+    <div class="tiles">
+      <a class="tile reveal" href="service-annual-service.html"><span class="n">01</span><h3>Annual Service</h3><p>Comprehensive seasonal inspection and service to keep your vessel survey-ready and reliable.</p><span class="go">Explore →</span></a>
+      <a class="tile reveal" href="service-engine-repower.html"><span class="n">02</span><h3>Engine Repower</h3><p>Diesel, gas, and outboard repowers with a fresh warranty and factory-spec installation.</p><span class="go">Explore →</span></a>
+      <a class="tile reveal" href="service-outdrive-outboard.html"><span class="n">03</span><h3>Outdrive &amp; Outboard</h3><p>Lower unit, gearcase, and outboard service by technicians who know the torque values cold.</p><span class="go">Explore →</span></a>
+      <a class="tile reveal" href="service-marine-electronics.html"><span class="n">04</span><h3>Marine Electronics</h3><p>Garmin, Simrad, and C-Zone navigation, switching, and integration — installed and calibrated.</p><span class="go">Explore →</span></a>
+      <a class="tile reveal" href="service-oil-fuel-cooling.html"><span class="n">05</span><h3>Oil, Fuel &amp; Cooling</h3><p>Oil and filter changes, fuel-system care, and cooling inspections that prevent the failures.</p><span class="go">Explore →</span></a>
+      <a class="tile reveal" href="service-custom-installs.html"><span class="n">06</span><h3>Custom Installs</h3><p>Wet Sounds audio, PowerPole anchors, SeaDek, Lumitec lighting, and paint protection film.</p><span class="go">Explore →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Benefits ============================ -->
+<section class="sec sec-dark" id="benefits">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="h-lg">Benefits of Boat Maintenance and Repower Service</h2>
+    </div>
+    <div class="benefits-list">
+      <div class="benefit reveal">
+        <img src="assets/benefit-1-aerial.jpg" alt="Aerial view of a boat under way">
+        <div>
+          <h3>Increase Overall Performance</h3>
+          <p>When you choose marine maintenance and vessel repowers, you get more from your marine vessel. Increase your boat's speed, improve fuel economy, upgrade to the latest technology and controls, and increase the overall reliability of your vessel.</p>
+        </div>
+      </div>
+      <div class="benefit reveal">
+        <img src="assets/benefit-2-console.jpg" alt="Center console at the dock">
+        <div>
+          <h3>Like a New Boat Without the New-Boat Sticker Price</h3>
+          <p>Preserve the resale value of your boat. Experience your boat like new again without the hassle of shopping for a new boat or reconfiguring it. With marine maintenance and engine repowers, our marine mechanics repair your vessel so it zips and flies like new.</p>
+        </div>
+      </div>
+      <div class="benefit reveal">
+        <img src="assets/benefit-3-cruising.jpg" alt="Motor yacht cruising">
+        <div>
+          <h3>Protect Your Investment</h3>
+          <p>With regular maintenance and repowers, you give the gift of life back to your vessel. A little upfront maintenance goes a long way in preserving your vessel, so you can let the good times roll without having to shell out money for a new boat.</p>
+        </div>
+      </div>
+      <div class="benefit reveal">
+        <img src="assets/benefit-4-helm.jpg" alt="Captain at the helm">
+        <div>
+          <h3>Fresh Repower, Fresh Warranty</h3>
+          <p>When you repower your boat, you'll receive a new warranty and the opportunity to add extended service for more peace of mind.</p>
+        </div>
+      </div>
+      <div class="benefit reveal">
+        <img src="assets/benefit-5-interior.jpg" alt="Upholstered cockpit seating">
+        <div>
+          <h3>Keep Your Setups and Configurations</h3>
+          <p>When you opt for maintenance and repowering services, you'll be able to keep the same setup and configurations on your vessel while boosting your vessel's performance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Top 10 Reasons ============================ -->
+<section class="sec" id="why">
+  <div class="wrap" style="text-align:center">
+    <div class="sec-head reveal">
+      <h2 class="h-lg">Top 10 Reasons Why Customers Choose Us</h2>
+      <p>When you choose Dynasty Customs, you get a trusted partner, consultant, and go-to provider for all things nautical.</p>
+    </div>
+
+    <div class="promo reveal" style="margin-bottom:var(--space-7)">
+      <h3>10% Off For Military and First Responders</h3>
+      <p>As a thank you, we would like to offer our military and first responders 10% off.</p>
+      <a class="btn btn-dark" href="quote.html">Book My Consultation</a>
+      <p class="fine">Not valid with any other offers or promotions. Restrictions apply. Must mention this offer at the time of scheduling.</p>
+    </div>
+
+    <ol class="reasons reveal">
+      <li>Quality service on every vessel, every time</li>
+      <li>ABYC-certified and NMEA-certified installers</li>
+      <li>Dedicated to customer service</li>
+      <li>Free estimates back to you within 48 hours</li>
+      <li>Customer satisfaction guaranteed</li>
+      <li>Locally owned and operated on the Suncoast</li>
+      <li>We work with your budget</li>
+      <li>We service all major marine brands</li>
+      <li>One shop for every system aboard</li>
+      <li>Honest estimates and straight answers</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ Brands ============================ -->
+<section class="sec sec-ink" style="padding-top:var(--space-7);padding-bottom:var(--space-7)">
+  <div class="wrap" style="text-align:center">
+    <h3 class="h-sm reveal" style="margin-bottom:var(--space-5)">Yes! We Service All Major Brands</h3>
+    <div class="brands reveal">
+      <span>YAMAHA</span><span>MERCURY</span><span>SUZUKI</span><span>SEASTAR</span>
+      <span>OPTIMUS</span><span>UFLEX</span><span>EVINRUDE</span><span class="more">And more</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="h-lg">Questions People Often Ask About Marine Maintenance and Repowers</h2>
+    </div>
+    <div class="acc reveal" style="max-width:760px;margin:0 auto">
+      <div class="qa">
+        <h3 class="q">What types of boats do you service at Dynasty Marine Customs?</h3>
+        <p class="a">Luxury boats, yachts, pontoon boats, fishing vessels, cabin cruisers, deck boats, sailboats, catamarans, and much more.</p>
+      </div>
+      <div class="qa">
+        <h3 class="q">How do I schedule a service appointment with you?</h3>
+        <p class="a">Give us a call at (941) 206-4375, or our alternate lines (941) 337-8473 and (941) 280-9742. We're open Monday to Friday, 9 AM to 5 PM.</p>
+      </div>
+      <div class="qa">
+        <h3 class="q">What happens if my boat is out on the water and has a problem?</h3>
+        <p class="a">Take care of yourself and your passengers first, then call us immediately. Also contact the U.S. Coast Guard on VHF-FM Channel 16 for emergencies.</p>
+      </div>
+      <div class="qa">
+        <h3 class="q">How often should I service my outboard engine?</h3>
+        <p class="a">We recommend servicing every 100 hours of use or at least once a year, including oil changes, filter replacements, and a full system check.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Testimonials ============================ -->
+<section class="sec sec-dark" id="reviews">
+  <div class="wrap" style="text-align:center">
+    <div class="sec-head reveal">
+      <h2 class="h-md">&ldquo;If You're Looking for Good, Honest Work, Call Dynasty.&rdquo; &mdash; Dynasty Customer</h2>
+    </div>
+    <div class="testi-row">
+      <div class="testimonial reveal">
+        <div class="who">Brian V.</div>
+        <div class="stars">★★★★★</div>
+        <p>Josh has <b>been great to work</b> with. He has helped me with my Garmins, adding autopilot, and getting set up with new custom tackle.</p>
+      </div>
+      <div class="testimonial reveal">
+        <div class="who">Elliott D.</div>
+        <div class="stars">★★★★★</div>
+        <p>Josh and Dynasty Marine are a <b>game changer</b>. A couple of hours later, he had my 300's working perfectly with zero programming.</p>
+      </div>
+      <div class="testimonial reveal">
+        <div class="who">Gelvis C.</div>
+        <div class="stars">★★★★★</div>
+        <p>We worked with Mike doing a PPF installation on 2 acrylic panels for a center console boat. <b>Honest, reliable, and friendly!</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Contact ============================ -->
+<section class="sec sec-sunk" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 class="h-lg reveal">Give Your Vessel Top-Quality Maintenance and Care</h2>
+      <p class="lede reveal" style="margin-top:var(--space-3)">Schedule a complimentary consultation for marine maintenance and repowers today.</p>
+
+      <div class="promo reveal" style="margin:var(--space-5) 0 0">
+        <h3>10% Off For Military and First Responders</h3>
+        <p>As a thank you, we would like to offer our military and first responders 10% off.</p>
+        <a class="btn btn-dark" href="tel:+19412064375">(941) 206-4375</a>
+      </div>
+
+      <div class="info reveal" style="margin-top:var(--space-6)">
+        <div class="row">
+          <h4>Shop</h4>
+          <p>6770 15th St E, Unit 19<br>Sarasota, FL 34243</p>
+        </div>
+        <div class="row">
+          <h4>Hours</h4>
+          <p>Mon – Fri &middot; 9:00 AM – 5:00 PM<br>Sat – Sun &middot; Closed</p>
+        </div>
+        <div class="row">
+          <h4>Service area</h4>
+          <div class="areas">
+            <span>Sarasota</span><span>Bradenton</span><span>Venice</span>
+            <span>Nokomis</span><span>Osprey</span><span>Longboat Key</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-panel reveal">
+      <h3>Get a FREE Quote Today!</h3>
+      <p class="note">Tell us about your vessel and we'll come back with a free estimate within 48 hours.</p>
+      <form class="js-quote" novalidate>
+        <div class="field"><input class="f" type="text" name="first" placeholder="First name" required></div>
+        <div class="field"><input class="f" type="email" name="email" placeholder="Email" required></div>
+        <div class="field"><input class="f" type="tel" name="phone" placeholder="Phone number" required></div>
+        <div class="field">
+          <select class="f" name="service">
+            <option value="">Service Needed:</option>
+            <option>Marine maintenance</option>
+            <option>Marine repower</option>
+            <option>Installation</option>
+            <option>Sales</option>
+          </select>
+        </div>
+        <div class="field"><textarea class="f" name="message" placeholder="Message"></textarea></div>
+        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+        <p class="fine">By clicking Submit, I consent to receive non-marketing text messages from Dynasty Marine Customs, LLC.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Footer ============================ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="assets/logo-transparent.png" alt="Dynasty Marine Customs">
+        <p>Florida's trusted marine maintenance, repower, and electronics shop. ABYC &amp; NMEA certified. Locally owned and operated.</p>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <p>6770 15th St E, Unit 19<br>Sarasota, FL 34243</p>
+        <h4 style="margin-top:var(--space-5)">Serving Area</h4>
+        <p>Venice, Sarasota, Bradenton, Nokomis, and surrounding areas</p>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <a href="tel:+19412064375">(941) 206-4375</a>
+        <a href="tel:+19413378473">(941) 337-8473</a>
+        <a href="mailto:info@dynastymarinecustoms.com">info@dynastymarinecustoms.com</a>
+        <a href="quote.html">Build an estimate</a>
+      </div>
+      <div>
+        <h4>Business Hours</h4>
+        <p>Mon – Fri &middot; 9:00 AM – 5:00 PM<br>Sat – Sun &middot; Closed</p>
+      </div>
+    </div>
+    <div class="ft-base">
+      <span>© 2026 Dynasty Marine Customs &middot; All rights reserved</span>
+      <span>ABYC &amp; NMEA Certified &middot; Sarasota, FL</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  requestAnimationFrame(() => document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('in')));
+
+  // Inline quote forms are capture-only until a backend is wired — see readme.
+  document.querySelectorAll('form.js-quote').forEach(form => {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const done = document.createElement('p');
+      done.className = 'sent';
+      done.textContent = "Thanks — we'll be in touch within 48 hours.";
+      form.replaceWith(done);
+    });
+  });
+</script>
+</body>
+</html>
