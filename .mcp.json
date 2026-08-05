@@ -1,0 +1,28 @@
+{
+  "$comment": [
+    "Integrations available to the Dynasty Marine agent.",
+    "Values are read from your environment — this file contains NO secrets and is safe to commit.",
+    "NEVER replace a ${VARIABLE} with a real token. Real values go in .env, which is gitignored.",
+    "Setup instructions: handoffs/netlify.md and handoffs/supabase.md"
+  ],
+  "mcpServers": {
+    "netlify": {
+      "command": "npx",
+      "args": ["-y", "@netlify/mcp@latest"],
+      "env": {
+        "NETLIFY_PERSONAL_ACCESS_TOKEN": "${NETLIFY_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--project-ref=${SUPABASE_PROJECT_REF}"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "${SUPABASE_ACCESS_TOKEN}"
+      }
+    }
+  }
+}

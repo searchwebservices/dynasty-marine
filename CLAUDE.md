@@ -49,10 +49,16 @@ Josh has authorized full scope across the business stack:
 
 | System | What you do with it | Status |
 |---|---|---|
-| **Website** | Content, copy, new pages, campaign landing pages, publishing | Code is in `website/` |
+| **Website** | Content, copy, new pages, campaign landing pages | Code is in `website/` |
+| **Netlify (hosting)** | Publish the site, check deploys, read build logs | **Setup required** — see `handoffs/netlify.md` |
+| **Supabase (database)** | Schema, queries, storage — the backbone of the System Builder | **Setup required** — see `handoffs/supabase.md` |
 | **GoHighLevel (CRM)** | Read/update leads, pipelines, workflows, reporting | **Setup required** — see `handoffs/gohighlevel.md` |
 | **Google Ads** | Campaign performance, spend review, keyword/ad group analysis | **Setup required** — see `handoffs/google-ads-analytics.md` |
 | **Google Analytics** | Traffic, conversion, behavior reporting | **Setup required** — see `handoffs/google-ads-analytics.md` |
+
+Netlify and Supabase are wired up through `.mcp.json` at the repo root. That file reads every
+credential from the environment, so **it holds no secrets and is safe in a public repo**. Real values
+live in `.env`. Never move a real token from one to the other.
 
 Facebook/Meta ads are **not** currently connected — Meta restricts this kind of access. Dynasty's
 Facebook lead ads already flow into GoHighLevel automatically, so working through GHL covers that
@@ -83,11 +89,14 @@ The website has its own capture paths (`quote.html` and the inline forms on `ind
 ```
 CLAUDE.md                     ← you are here; the operating manual
 README.md                     ← orientation for a human reading this repo
+.mcp.json                     ← integrations (Netlify, Supabase). No secrets — reads from environment
+.env.example                  ← template for .env. Copy it, fill it, never commit the copy
 website/                      ← the live website source (see §6)
 handoffs/                     ← setup tasks. Treat as a PENDING QUEUE (see §7)
+  netlify.md
+  supabase.md
   gohighlevel.md
   google-ads-analytics.md
-  deploying-the-site.md
 docs/                         ← reference. Read when relevant, don't re-derive
   system-builder-spec.md      ← Josh's flagship project. Read before building it
   call-2026-08-03.md          ← the handoff call this repo came from
@@ -139,9 +148,14 @@ finished, mark it complete at the top of that file so you don't redo it.
 
 | # | Task | File | Why it matters |
 |---|---|---|---|
-| 1 | Connect GoHighLevel | `handoffs/gohighlevel.md` | Unlocks CRM access; also the destination for website form submissions |
-| 2 | Connect Google Ads + Analytics | `handoffs/google-ads-analytics.md` | Lets you report on spend and performance |
-| 3 | Confirm site publishing access | `handoffs/deploying-the-site.md` | Until this is settled you can edit the site but not publish it |
+| 1 | Set up Dynasty's own Netlify | `handoffs/netlify.md` | Until this is done you can edit the site but **not publish it** |
+| 2 | Connect GoHighLevel | `handoffs/gohighlevel.md` | Unlocks CRM access; also the destination for website form submissions |
+| 3 | Set up Supabase | `handoffs/supabase.md` | Nothing in the System Builder can be stored until this exists |
+| 4 | Connect Google Ads + Analytics | `handoffs/google-ads-analytics.md` | Lets you report on spend and performance |
+
+Do them in that order. Netlify first because publishing is the thing that unblocks everything else —
+until it's done, every change you make sits in the repo unseen by anyone. Supabase can wait until the
+System Builder work actually starts, but the account is worth creating early.
 
 ### Open items on the website itself
 
@@ -181,6 +195,11 @@ Josh's and only Josh's.** Your job is to get it out of his head and into a struc
 efficient way: ask him to talk it through as a long voice note. Claude Code transcribes speech
 accurately and handles long, rambling context dumps well — he does not need to write anything up.
 
+Once that structure exists it needs somewhere to live, which is what **Supabase** is for — the parts
+catalog, labor rates, saved configurations, and submitted quotes. See `handoffs/supabase.md`. Get the
+pricing logic out of Josh's head first, then design the schema around it. Designing tables before you
+understand the pricing means rebuilding them.
+
 Realistic timeline: **about a month** to something polished and tested, not a week. Bay will review
 it for security risks before it goes live to real customers.
 
@@ -199,7 +218,11 @@ it for security risks before it goes live to real customers.
   no permission.
 - **Never put secrets in this repository.** API keys, tokens, and passwords go in a local `.env`
   file, which is gitignored. This repo may be public. If you ever find a credential committed here,
-  stop and tell Josh immediately.
+  stop and tell Josh immediately — and treat that credential as compromised, meaning it gets revoked
+  and reissued, not just deleted from the file. Git remembers.
+- **`.mcp.json` is committed. `.env` is not.** `.mcp.json` refers to credentials by name
+  (`${SUPABASE_ACCESS_TOKEN}`) and reads the actual values from the environment. If you are ever
+  about to paste a real token into `.mcp.json` to "make it work," you have the wrong file.
 
 ---
 

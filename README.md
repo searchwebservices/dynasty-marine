@@ -27,15 +27,22 @@ what's connected, what isn't, and what's pending. Your agent reads it and picks 
 | `website/` | The live website — 8 pages, no build step. |
 | `handoffs/` | Setup tasks that aren't done yet. Work through these. |
 | `docs/` | Reference: the System Builder spec, the handoff call, the design system. |
+| `.env.example` | Template for your credentials. Copy to `.env` — that copy is never committed. |
 
 ---
 
-## First three things to do
+## First four things to do
 
 1. **Finish signing in to Claude** in the VS Code extension *(update the card on the Claude account
    if the payment is still bouncing)*
-2. **Connect GoHighLevel** — `handoffs/gohighlevel.md`
-3. **Settle site publishing access** — `handoffs/deploying-the-site.md`
+2. **Set up your own Netlify** — `handoffs/netlify.md`. Free account. This is what lets you actually
+   publish changes to the live site.
+3. **Connect GoHighLevel** — `handoffs/gohighlevel.md`
+4. **Set up Supabase** — `handoffs/supabase.md`. Free account. The database the System Builder runs
+   on.
+
+You don't have to do any of these alone. Open the file, hand it to your agent, and work through it
+together.
 
 ---
 
@@ -50,5 +57,6 @@ what's connected, what isn't, and what's pending. Your agent reads it and picks 
 
 https://dynasty-marine-customs.netlify.app
 
-Note that pushing to this repository does **not** currently update the live site — see
-`handoffs/deploying-the-site.md`.
+Note that pushing to this repository does **not** currently update the live site — the hosting is
+still on Search Visionary Tech's account. `handoffs/netlify.md` fixes that, and it's the first thing
+worth doing.
