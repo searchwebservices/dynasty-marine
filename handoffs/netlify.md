@@ -122,16 +122,31 @@ you next start Claude Code in this folder, it will pick it up and ask you to app
 
 ---
 
-## Note: Netlify Forms is switched off
+## Note: there is no form on the site, and Netlify Forms is off
 
-Netlify has a built-in form handler that would capture submissions with almost no code. It is
-currently **not enabled** on the project.
+Netlify has a built-in form handler that captures submissions with almost no code. It is **not
+enabled** on this project — and more to the point, **there is nothing on the site for it to
+capture.**
 
-Leave it off. The better route for Dynasty's forms is sending them straight into GoHighLevel, so
-website leads land in the same pipeline as the Facebook ones instead of a separate inbox. See
-`handoffs/gohighlevel.md`.
+`website/quote.html` reads like a contact form but is a multi-step JavaScript wizard that ends by
+opening a `mailto:` draft in the visitor's own mail client. No form post, no server, no submission
+Netlify could ever see. Turning Netlify Forms on would change nothing by itself.
+
+Leave it off anyway. The right fix is sending the wizard's answers into GoHighLevel, so website
+leads land in the same pipeline as the Facebook ones instead of depending on a visitor actually
+sending a draft their browser opened for them. See `handoffs/gohighlevel.md`.
+
+This also matters for measurement: because there is no form post and no thank-you page, an Ads
+conversion cannot be tagged the usual way. See `handoffs/google-ads-analytics.md`.
 
 ---
+
+## Do this one first
+
+`handoffs/google-ads-analytics.md` depends on this file being finished. Analytics tags have to go
+on the live site to report anything, and until this repo is connected to Dynasty's own Netlify,
+nothing pushed here reaches the live site — the tags would sit in the repository doing nothing while
+the reports stayed empty. Netlify first, then measurement.
 
 ## Until this is done
 
