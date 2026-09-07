@@ -1,7 +1,13 @@
 # Handoff: Connect Google Ads + Google Analytics
 
-**Status: NOT STARTED**
+**Status: NOT STARTED** (agent access) — but **the campaigns are now LIVE as of Sept 2026.**
 *When this is done, change the line above to `Status: COMPLETE — <date>` so it isn't repeated.*
+
+> **Read `docs/google-ads-2026-09-07-review.md` first.** Ads are spending real money now, while
+> the agent still has no API access and the site still has no tracking tag. That review flags a
+> possible landing-page URL mismatch on two of the three campaigns which needs Josh to verify.
+> Until then, Route A below (export to Drive) is the working path — the agent already has Google
+> Drive access, so an export to Sheets is readable immediately with no credential setup.
 
 ---
 
