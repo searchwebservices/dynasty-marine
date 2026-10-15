@@ -12,10 +12,20 @@ lives here, and everything you learn should be written back here.
 
 **Dynasty Marine Customs, LLC** — marine maintenance and repair, Sarasota, Florida.
 
-- **Address:** 6770 15th St E, Unit 19, Sarasota, FL 34243
-- **Phone:** (941) 206-4375
+- **Address:** 6760 15th St E, Unit A, Sarasota, FL 34243
+- **Phone:** (941) 280-9742
 - **Owner / your operator:** Josh
-- **Website:** https://dynasty-marine-customs.netlify.app
+- **Website:** https://dynastymarinecustoms.com (live). Older build preview: https://dynasty-marine-customs.netlify.app
+
+**NAP (name, address, phone) — confirmed by Josh, Oct 15 2026.** This is the only public number and
+address. It must match the Google Business Profile exactly; don't add alternate lines back.
+
+> **The live site is NOT built from this repo.** dynastymarinecustoms.com is served by Josh's Netlify
+> project `dynastymarinecustoms`, deployed from the private GitHub repo
+> `jmorell95/dynasty-marine-customs` (13 pages incl. /about, /faq, /trolling-motor-installation,
+> GoHighLevel form embed, GA4 + Ads tags). `website/` here is the older 8-page handoff build.
+> **Never publish `website/` to that Netlify project** — it would wipe those pages, the form and the
+> tracking. Site work goes in the live repo; see `docs/audit-2026-10-14.md`.
 
 **Service lines** (each has its own page on the site):
 1. Annual service & maintenance
@@ -100,6 +110,7 @@ handoffs/                     ← setup tasks. Treat as a PENDING QUEUE (see §7
 docs/                         ← reference. Read when relevant, don't re-derive
   system-builder-spec.md      ← Josh's flagship project. Read before building it
   call-2026-08-03.md          ← the handoff call this repo came from
+  audit-2026-10-14.md         ← live-site audit + fix status. Update the Status column as items close
   design-system/              ← the visual system the site is built on
 ```
 

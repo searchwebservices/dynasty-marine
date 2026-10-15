@@ -1,5 +1,10 @@
 # Handoff: Connect Google Ads + Google Analytics
 
+> **Update Oct 15, 2026:** the Oct 14 audit found GA4 and Google Ads conversion tags already
+> installed on the live site. The "no tracking tag" section below describes the older build in
+> `website/`, not the live site. Verify against the live repo before redoing this work.
+
+
 **Status: NOT STARTED**
 *When this is done, change the line above to `Status: COMPLETE — <date>` so it isn't repeated.*
 

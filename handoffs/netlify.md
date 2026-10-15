@@ -1,5 +1,10 @@
 # Handoff: Set up Netlify (hosting)
 
+> **Update Oct 15, 2026:** Josh's own Netlify project `dynastymarinecustoms` already serves
+> dynastymarinecustoms.com (deploys from GitHub `jmorell95/dynasty-marine-customs`) and the agent's
+> Netlify connection can read it. Check what's left here before redoing any of it.
+
+
 **Status: NOT STARTED**
 *When this is done, change the line above to `Status: COMPLETE — <date>` so it isn't repeated.*
 
